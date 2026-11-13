@@ -1,0 +1,296 @@
+
+/* GENERAL STYLING */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: #17243a;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* TASK 1(a): FLEXBOX NAVIGATION */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background-color: #ffffff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 6%;
+    gap: 20px;
+}
+
+.logo {
+    color: #2563eb;
+    font-size: 25px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #17243a;
+    font-weight: bold;
+}
+
+.nav-links a:hover {
+    color: #2563eb;
+}
+
+/* TASK 1(b): HERO SECTION */
+
+.hero {
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #eef5ff;
+}
+
+.hero-content {
+    max-width: 750px;
+}
+
+.hero h1 {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-bottom: 25px;
+    color: #586579;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #174bb8;
+}
+
+/* ABOUT SECTION */
+
+.about {
+    padding: 70px 8%;
+    text-align: center;
+}
+
+.about h2,
+.skills h2,
+.contact h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.about p {
+    max-width: 750px;
+    margin: auto;
+    color: #586579;
+}
+
+/* TASK 2(a): FLEXBOX SKILLS CARDS */
+.skills {
+    padding: 70px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+  /* .skills {
+    padding: 70px max(16px, calc((100% - 1100px) / 2));
+    background-color: #f7f9fc;
+}   */
+
+
+.skills h2 {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.skills-container {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px;
+}
+
+/* TASK 2(b): CARD COLUMN AND LEARN MORE LINK */
+
+.skill-card {
+    flex: 1 1 180px;
+    min-width: 0;
+    min-height: 230px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 25px;
+    background-color: white;
+    border: 1px solid #e0e6ef;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.skill-card h3 {
+    margin-top: 15px;
+    margin-bottom: 10px;
+    color: #2563eb;
+}
+
+.skill-card p {
+    color: #586579;
+    margin-bottom: 15px;
+}
+
+/* PUSH LINK TO THE BOTTOM */
+
+.learn-more {
+    margin-top: auto;
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* TASK 2(c): ABSOLUTELY POSITIONED LABEL */
+
+.label {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 4px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.new {
+    background-color: #dcfce7;
+    color: #166534;
+}
+
+.learning {
+    background-color: #fef3c7;
+    color: #92400e;
+}
+
+.expert {
+    background-color: #e0e7ff;
+    color: #3730a3;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+    padding: 70px 20px;
+    text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+    padding: 25px;
+    text-align: center;
+    background-color: #17243a;
+    color: white;
+}
+
+/* TASK 3(b): FIXED BACK TO TOP BUTTON */
+
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 200;
+    padding: 10px 15px;
+    background-color: #2563eb;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    font-size: 13px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 560px) {
+
+    .navbar {
+        padding: 15px 4%;
+        gap: 10px;
+    }
+
+    .logo {
+        font-size: 19px;
+    }
+
+    .nav-links {
+        gap: 12px;
+        font-size: 13px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .skills,
+    .about {
+        padding: 45px 16px;
+    }
+
+    .skill-card {
+        min-height: 220px;
+    }
+
+    .back-to-top {
+        right: 10px;
+        bottom: 10px;
+        padding: 8px 11px;
+    }
+}
+
+/* EXTRA SMALL SCREENS */
+
+@media (max-width: 360px) {
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav-links {
+        width: 100%;
+        justify-content: space-between;
+    }
+}
